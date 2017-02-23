@@ -402,7 +402,8 @@ h6 {
 .site-slider ul li {
   float: left;
   margin: 0;
-  max-height: 400px;
+  /*max-height: 400px;*/ 
+  max-height: 350px;
 }
 
 .bx-wrapper img {
@@ -489,6 +490,7 @@ h6 {
     Services Styling
    ========================================================================== */
 #services {
+/*  padding-top: 160px;*/
   padding-top: 160px;
   margin-top: -60px;
 }
