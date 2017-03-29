@@ -67,8 +67,7 @@ http://www.templatemo.com/tm-401-sprint
                 <div class="row">
                     <div class="col-md-4 col-sm-6 col-xs-6">
                         <div id="templatemo_logo">
-
-                            <h1><a href="#"></a></h1>
+                            <h1><a href="#"><img src="images/mondelez.png"></a></h1>
                         </div> <!-- /.logo -->
                     </div> <!-- /.col-md-4 -->
                     <div class="col-md-8 col-sm-6 col-xs-6">
