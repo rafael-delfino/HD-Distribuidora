@@ -1,3 +1,31 @@
+<?php
+// Free html5 templates : www.zerotheme.com
+
+$text = "<span style='color:red; font-size: 20px;'>Ocorreu um erro! Por favor, tente novamente.</span>";
+
+if(isset($_POST['name']))
+{
+	$name=$_POST['name'];
+	$email=$_POST['email'];
+	$message=$_POST['comments'];
+
+    $subject=$_POST['subject'];
+    
+
+	$to = "rafaelp.delfino@gmail.com";	
+	$message = " Name: " . $name ."\r\n Email: " . $email . "\r\n Message:\r\n" . $message;
+	 
+	$from = "ContatoSite";
+	$headers = "From:" . $from . "\r\n";
+	$headers .= "Content-type: text/plain; charset=UTF-8" . "\r\n"; 
+	 
+	if(@mail($to,$subject,$message,$headers))
+	{
+	  $text = "<span style='color:#26b864; font-size: 20px;'>Sua mensagem foi enviada com sucesso!</span>";
+	}
+}
+?>
+
 <!DOCTYPE html>
 <!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -39,7 +67,8 @@ http://www.templatemo.com/tm-401-sprint
                 <div class="row">
                     <div class="col-md-4 col-sm-6 col-xs-6">
                         <div id="templatemo_logo">
-                            <h1><a href="#"><img src="images/mondelez.png"></a></h1>
+
+                            <h1><a href="#"></a></h1>
                         </div> <!-- /.logo -->
                     </div> <!-- /.col-md-4 -->
                     <div class="col-md-8 col-sm-6 col-xs-6">
@@ -280,7 +309,6 @@ http://www.templatemo.com/tm-401-sprint
     </div> <!-- /#products -->    
 
 
-
     <div id="contact" class="content-section">
         <div class="container">
             <div class="row">
@@ -298,6 +326,7 @@ http://www.templatemo.com/tm-401-sprint
                         <div class="col-md-6 col-sm-6">                        
                             <div class="row contact-form">
 
+                                <center><?php echo $text;?></center>
                                 <form method="post" name="contact_form" action="contacts.php">
                                     <fieldset class="col-md-6 col-sm-6">
                                         <input id="name" type="text" name="name" placeholder="Nome" required="">
@@ -351,6 +380,12 @@ http://www.templatemo.com/tm-401-sprint
         <script src="js/bootstrap.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+
+        <script>            
+            $(document).ready(function() { 
+                window.location.href='#contact';
+            });
+        </script>
         
         <!-- templatemo 401 sprint -->
     </body>

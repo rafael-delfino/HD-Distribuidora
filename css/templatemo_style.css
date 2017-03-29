@@ -334,7 +334,7 @@ h6 {
 }
 #templatemo_logo h1 a {
   /* RAFAEL margin-left: 140px;*/
-  margin-left: 180px;
+  margin-left: 140px;
   color: white;
   display: block;
   font-size: 18px;
@@ -402,8 +402,7 @@ h6 {
 .site-slider ul li {
   float: left;
   margin: 0;
-  /*max-height: 400px;*/ 
-  max-height: 350px;
+  max-height: 500px;  /*Rafael */
 }
 
 .bx-wrapper img {
